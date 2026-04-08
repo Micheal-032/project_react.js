@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-    baseURL: 'http://localhost:5000/api',
+    baseURL: import.meta.env.PROD ? 'https://social-media-backend-3ybx.onrender.com/api' : 'http://localhost:5000/api',
 });
 
 // Request interceptor to attach JWT token
